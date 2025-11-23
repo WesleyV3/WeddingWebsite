@@ -1,7 +1,7 @@
 {
   "builds": [
-    { "src": "build/server/index.js", "use": "@vercel/node" },
-    { "src": "build/client/**", "use": "@vercel/static" }
+    { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "build/client" } },
+    { "src": "build/server/index.js", "use": "@vercel/node" }
   ],
   "routes": [
     { "src": "/(.*)", "dest": "build/server/index.js" }
