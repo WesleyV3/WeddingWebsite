@@ -11,10 +11,10 @@ export default function Travel() {
   const [mapLabel, setMapLabel] = React.useState(weddingLabel);
   return (
     <main className="relative min-h-screen w-full" style={{ fontFamily: "'Playfair Display', serif" }}>
+        <Menu />
       <FullBg src="/background.jpg" />
       <div className="fixed inset-0 z-5 pointer-events-none" style={{ backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)' }} />
       <div className="relative z-10 flex flex-col min-h-screen w-full items-center justify-center px-4">
-        <Menu />
         <section id="travel" className="max-w-xl w-full py-12 px-6 text-center rounded-2xl shadow-xl bg-white/15 dark:bg-slate-900/15 backdrop-blur-xl border border-white/25 dark:border-slate-700/25">
           <TravelHeader />
           <TravelTips setMapQuery={setMapQuery} setMapLabel={setMapLabel} />
@@ -50,22 +50,22 @@ function TravelTips({ setMapQuery, setMapLabel }: { setMapQuery: (q: string) => 
       <TravelTipCard
         icon={<span className="text-xl" role="img" aria-label="Wedding">💍</span>}
         title="Wedding Location"
-        text={<span className="cursor-pointer underline hover:text-white/80" onClick={() => { setMapQuery("Taco Bell Cantina, 3717 S Las Vegas Blvd Suite 140-A, Las Vegas, NV 89109"); setMapLabel("Venue: 3717 S Las Vegas Blvd Suite 140-A, Las Vegas, NV 89109, United States"); }}>Wildlands <p>Raadhuisplein 99, 7811 AP Emmen</p></span>}
+        text={<span className="cursor-pointer underline hover:text-white/80" onClick={() => { setMapQuery("Wildlands Raadhuisplein 99, 7811 AP Emmen"); setMapLabel("Venue: Wildlands Raadhuisplein 99, 7811 AP Emmen"); }}>Wildlands <p>Raadhuisplein 99, 7811 AP Emmen</p></span>}
       />
       <TravelTipCard
         icon={<span className="text-xl" role="img" aria-label="Airport">✈️</span>}
         title="Nearest Airport"
-        text={<span className="cursor-pointer underline hover:text-white/80" onClick={() => { setMapQuery("Harry Reid International Airport, Las Vegas, NV"); setMapLabel("Harry Reid International Airport (LAS), Las Vegas, NV"); }}>Schiphol <p>Evert van de Beekstraat 202, 1118 CP Schiphol</p></span>}
+        text={<span className="cursor-pointer underline hover:text-white/80" onClick={() => { setMapQuery("Schiphol Evert van de Beekstraat 202, 1118 CP Schiphol"); setMapLabel("Schiphol Evert van de Beekstraat 202, 1118 CP Schiphol"); }}>Schiphol <p>Evert van de Beekstraat 202, 1118 CP Schiphol</p></span>}
       />
       <TravelTipCard
         icon={<span className="text-xl" role="img" aria-label="Hotel">🏨</span>}
         title="Hotel Recommendations"
         text={<span>
-          <span className="cursor-pointer underline hover:text-white/80 block" onClick={() => { setMapQuery("The Cosmopolitan of Las Vegas, 3708 Las Vegas Blvd S, Las Vegas, NV 89109"); setMapLabel("The Cosmopolitan of Las Vegas, 3708 Las Vegas Blvd S, Las Vegas, NV 89109"); }}>
+          <span className="cursor-pointer underline hover:text-white/80 block" onClick={() => { setMapQuery("Fletcher Hotel Willinkplein 42, 7811 DD Emmen"); setMapLabel("Fletcher Hotel Willinkplein 42, 7811 DD Emmen"); }}>
             <b>Fletcher Hotel</b><br />
             Willinkplein 42, 7811 DD Emmen
           </span>
-          <span className="cursor-pointer underline hover:text-white/80 block mt-2" onClick={() => { setMapQuery("Excalibur Hotel & Casino, 3850 S Las Vegas Blvd, Las Vegas, NV 89109"); setMapLabel("Excalibur Hotel & Casino, 3850 S Las Vegas Blvd, Las Vegas, NV 89109"); }}>
+          <span className="cursor-pointer underline hover:text-white/80 block mt-2" onClick={() => { setMapQuery("Hotel ten Cate Noordbargerstraat 44, 7812 AB Emmen"); setMapLabel("Hotel ten Cate Noordbargerstraat 44, 7812 AB Emmen"); }}>
             <b>Hotel ten Cate</b>
             <p>Noordbargerstraat 44, 7812 AB Emmen</p>
           </span>

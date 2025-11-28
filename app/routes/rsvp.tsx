@@ -6,10 +6,10 @@ export default function RSVP() {
   const [submitted, setSubmitted] = useState(false);
   return (
     <main className="relative min-h-screen w-full" style={{ fontFamily: "'Playfair Display', serif" }}>
+        <Menu />
       <FullBg src="/background.jpg" />
       <div className="fixed inset-0 z-5 pointer-events-none" style={{ backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)' }} />
       <div className="relative z-10 flex flex-col min-h-screen w-full items-center justify-center px-4">
-        <Menu />
         <section id="rsvp" className="max-w-md w-full text-center">
           <div className="mx-auto bg-white/15 dark:bg-slate-900/15 backdrop-blur-xl p-8 rounded-2xl shadow-xl border border-white/25 dark:border-slate-700/25 flex flex-col items-center">
             <h2 className="text-4xl md:text-5xl font-light mb-8 text-white dark:text-white tracking-wide drop-shadow-md" style={{ fontFamily: "'Playfair Display', serif" }}>RSVP</h2>

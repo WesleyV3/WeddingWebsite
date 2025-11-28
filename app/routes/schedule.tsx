@@ -98,6 +98,7 @@ export default function Schedule() {
 			   className="relative min-h-screen w-full"
 			   style={{ fontFamily: "'Playfair Display', serif" }}
 		   >
+			   <Menu />
 			   <FullBg src="/background.jpg" />
 			   <div
 				   className="fixed inset-0 z-5 pointer-events-none"
@@ -107,7 +108,6 @@ export default function Schedule() {
 				   }}
 			   />
 			   <div className="relative z-10 flex flex-col min-h-screen w-full items-center justify-center px-4">
-				   <Menu />
 				   <section
 					   id="schedule"
 					   className="max-w-xl w-full py-12 px-6 text-center rounded-2xl shadow-xl bg-white/15 dark:bg-slate-900/15 backdrop-blur-xl border border-white/25 dark:border-slate-700/25 mt-8"

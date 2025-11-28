@@ -1,0 +1,55 @@
+/* Desktop styles for menu links */
+.menu-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.menu-links a {
+  padding: 0;
+  text-align: left;
+  color: #fff;
+  font-weight: 600;
+  background: none;
+}
+/* Remove forced background for desktop menu */
+.menu-hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+}
+.menu-hamburger .bar {
+  width: 100%;
+  height: 4px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+@media (max-width: 768px) {
+  .menu-hamburger {
+    display: flex;
+  }
+  .menu-links {
+    display: none;
+    position: absolute;
+    background-color: #1f2937;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    z-index: 100;
+  }
+  .menu-links.open {
+    display: flex;
+  }
+  .menu-links a {
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+  }
+}
