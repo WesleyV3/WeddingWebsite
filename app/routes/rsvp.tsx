@@ -16,7 +16,17 @@ export default function RSVP() {
             {submitted ? (
               <div className="text-lg text-white/95 drop-shadow-sm">Thank you for your RSVP! We can't wait to celebrate with you.</div>
             ) : (
-             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScRYw6EqjKDIitQAWMfxXjjWk39XcjmqtuIsc61ZzT0MVBngg/viewform?embedded=true" width="640" height="812" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+             <div className="w-full" style={{ position: 'relative', paddingBottom: '126.875%', height: 0, overflow: 'hidden' }}>
+               <iframe 
+                 src="https://docs.google.com/forms/d/e/1FAIpQLScRYw6EqjKDIitQAWMfxXjjWk39XcjmqtuIsc61ZzT0MVBngg/viewform?embedded=true" 
+                 style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                 frameBorder="0" 
+                 marginHeight={0} 
+                 marginWidth={0}
+               >
+                 Loading…
+               </iframe>
+             </div>
             )}
           </div>
         </section>
