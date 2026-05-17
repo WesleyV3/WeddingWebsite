@@ -5,7 +5,7 @@ const SCHEDULE = [
 	{
 		day: "Saturday, May 23rd",
 		events: [
-			{ time: "1:15 PM", title: "Arrive at Wildlands." },
+			{ time: "1:00 PM", title: "Arrive at Wildlands." },
 			{ time: "1:30 PM", title: "Ceremony." },
 			{ time: "2:15 PM", title: "Coffee & Cookies." },
 			{ time: "2:45 PM", title: "Explore the Zoo while Kaylea & Wesley take pictures." },
