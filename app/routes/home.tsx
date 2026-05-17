@@ -58,7 +58,7 @@ export default function Home() {
         {/* Top Menu */}
   <Menu />
         {/* Centered Content */}
-        <div className="flex-1 flex flex-col items-center justify-center text-center px-4" style={{ minHeight: '100vh' }}>
+        <div className="flex-1 flex flex-col items-center justify-center text-center px-0 sm:px-4 w-full">
           <div>
             {/* EventLive Embed */}
             <div className="eventlive-embed glass-luxury">
