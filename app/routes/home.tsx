@@ -1,6 +1,7 @@
 
 import React, { useState } from "react";
 import Menu from "../components/Menu";
+import "../components/EventLiveEmbed.css";
 
 const PHOTOS = [
   "/background.jpg",
@@ -35,7 +36,7 @@ export function meta() {
       name: "description",
       content:
         WEDDING_DATE && typeof WEDDING_DATE.getTime === "function"
-          ? `Join us for our wedding on ${WEDDING_DATE.toLocaleDateString()}`
+          ? `Join us for our wedding on May 23, 2026`
           : "Join us for our wedding. Date to be determined."
     },
   ];
@@ -59,7 +60,6 @@ export default function Home() {
         {/* Centered Content */}
         <div className="flex-1 flex flex-col items-center justify-center text-center px-4" style={{ minHeight: '100vh' }}>
           <div>
-            <link rel="stylesheet" href="/app/components/EventLiveEmbed.css" /> {/* For SSR, but for Vite/React, import below */}
             {/* EventLive Embed */}
             <div className="eventlive-embed glass-luxury">
               <iframe
