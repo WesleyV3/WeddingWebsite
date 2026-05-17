@@ -58,17 +58,25 @@ export default function Home() {
   <Menu />
         {/* Centered Content */}
         <div className="flex-1 flex flex-col items-center justify-center text-center px-4" style={{ minHeight: '100vh' }}>
-          <div className="mt-32 md:mt-40" />
-          <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-lg mb-4 tracking-tight" >
-            {NAMES}
-          </h1>
-          <div className="text-2xl md:text-3xl text-white/90 mb-2 drop-shadow">
-            Wedding is in:
-          </div>
-          <div className="text-lg md:text-xl text-pink-200 font-semibold mb-8 drop-shadow">
-            {WEDDING_DATE && typeof WEDDING_DATE.getTime === "function"
-              ? getCountdown(WEDDING_DATE)
-              : "To be determined"}
+          <div>
+            <link rel="stylesheet" href="/app/components/EventLiveEmbed.css" /> {/* For SSR, but for Vite/React, import below */}
+            {/* EventLive Embed */}
+            <div className="eventlive-embed glass-luxury">
+              <iframe
+                src="https://evt.live/kayleavelderman353/kaylea-wesley-wedding/embed?autoplay=true"
+                allowFullScreen
+                allow="autoplay"
+                title="EventLive Wedding Stream"
+              />
+            </div>
+            <a
+              className="eventlive-powered"
+              href="https://www.eventlive.pro/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Powered by EventLive
+            </a>
           </div>
         </div>
         {/* For future: sections can be added below */}
